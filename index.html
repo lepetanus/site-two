@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+<title>
+test site
+</title>
+<meta http-equiv="content-type" content="text/html;charset=windows-1251" />
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js" type="text/javascript"></script>
+    <script src="http://www.sooource.net/sites/default/files/jquery.cookie.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){						   	
+			if ($.cookie("blockhide")=="Свернуто") {
+				$('.hide.cookies').hide();
+				$('a.cookies').html('Развернуть');
+			}	else {
+ 				$('.hide.cookies').show();
+				$('a.cookies').html('Свернуть');       
+      }
+			$('.view-source a.cookies').toggle(
+				function(){
+          $.cookie("blockhide", "Развернуто");
+					$(this).siblings('.hide.cookies').stop(false, true).slideDown(500);
+					$(this).html('Свернуть');
+				}, 
+				function(){
+          $.cookie("blockhide", "Свернуто");
+					$(this).siblings('.hide.cookies').stop(false, true).slideUp(500);
+					$(this).html('Развернуть');
+				}
+			);
+      
+      $('.hide.nocookies').hide();
+			$('.view-source a.nocookies').toggle(
+				function(){
+					$(this).siblings('.hide.nocookies').stop(false, true).slideDown(500);
+					$(this).html('Свернуть');
+				}, 
+				function(){
+					$(this).siblings('.hide.nocookies').stop(false, true).slideUp(500);
+					$(this).html('Развернуть');
+				}
+			);
+		});
+</script>	
+
+
+<body>
+<div id="container">
+<div id="content">
+	<p class="mytext">Фамилия, имя, отчество</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">
+						Иванов Павел Борисович
+					</p>
+				</div>
+		</div>
+	<p class="mytext">Е-mail</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">pawel5000@gmail.com</p>
+				</div>
+		</div>
+		<p class="mytext">Телефон:</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">+7 985 134 30 92</p>
+				</div>
+		</div>
+		<p class="mytext">Год рождения:</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">1988</p>
+				</div>
+		</div>	
+		<p class="mytext">Город, в котором живёте: </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext"> Москва</p>
+				</div>
+		</div>		
+<p class="mytext">Вуз, факультет, специальность, кафедра: </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Московский Технический Университет Связи и Информатики, факультет ИТ, специальность ПО (230105), кафедра Математической Кибернетики и Информационных Технологий (МКиКТ)</p>
+				</div>
+		</div>	
+<p class="mytext">Год окончания вуза: </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">2013</p>
+				</div>
+		</div>
+<p class="mytext">На каком уровне владеете английским языком? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Pre-Intermediate</p>
+				</div>
+		</div>
+<p class="mytext">Чего вы ожидаете от участия в Школе? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Новый опыт в задачах на javascript, знакомство с highload-проектами, изучение тонкостей разработки.</p>
+				</div>
+		</div>
+<p class="mytext">Откуда вы о нас узнали? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">catap</p>
+				</div>
+		</div>
+<p class="mytext">Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">20-30 часов в неделю</p>
+				</div>
+		</div>
+<br>
+Опыт разработки: <br>
+<p class="mytext">Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext"> Сайты из детства, которые все сдохли. На данный момент увлекаюсь направлениями CV, Machine Learning, Compilers. В бэкграунде есть приложения для ведущей кафедры. Хочу себя попробовать в смежной области разработки интерфейсов.</p>
+				</div>
+		</div>
+<p class="mytext">Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">C, Java, PHP, Perl, Python, Ruby. Склоняюсь в сторону C, Python и Perl.</p>
+				</div>
+		</div>
+<p class="mytext">Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">(Emacs + gcc) пользуюсь обычно, Eclipse, Netbeans, Visual Studio,  </p>
+				</div>
+		</div>
+<p class="mytext">С какими ОС приходилось сталкиваться? Для каких целей вы их использовали? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Debian, FreeBSD, Fedora Core. Цели - администрирование и развёртывание различных сервисов, использование в качестве домашней ОС.</p>
+				</div>
+		</div>	
+<p class="mytext">Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?</p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">svn, git. Нравится git.</p>
+				</div>
+		</div>
+<p class="mytext">Использовали ли вы системы постановки и ведения задач? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Удалённые - да. Basecamp и Pivotal Tracker. </p>
+				</div>
+		</div>
+<p class="mytext">Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">w3.org </p>
+				</div>
+		</div>
+<p class="mytext">Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде? </p>
+		<div class="view-source">
+			<a class="nocookies" href="#">Развернуть</a>
+				<div class="hide nocookies">
+					<p class="mytext">Есть, опыт в основном системного администрирования и разработки, делаю первые шаги в сторону профессиональной разработки при случае.</p>
+				</div>
+		</div>	
+</body>
+</html>
